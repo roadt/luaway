@@ -1,16 +1,27 @@
---- semicolon may optionally follow any statement. but this is just a convention. Line breaks  and semicolon play no role in Lua's syntax
+-- 1.1 Chunk
+-- a chunk is a sequence of statements
+-- semicolon is convention to break statemetns. not lua syntax.
+
 a = 1
 b = a*2
-a = 1 ; b = a*2
-a = 1 b = a*2  --- ugly, but valid
+
+a = 1;
+b = a*2;
+
+a = 1 ; b = a * 2
+a = 1   b = a*2  -- ugly, but valid.
 
 
----     prompt> lua -la -lb
----     prompt> lua -i -la -lb
+--  lua interpreter 
+-- lua -la -lb
+-- lua -i -la -lb
 
-dofile("book/pil/1_1_lib1.lua")   -- load your library
+-- dofile
+dofile("001.lua")
+
+-- dofile
+dofile("003a.lua")   -- load a library
 n = norm(3.4, 1.0)
-print(twice(n))             -->   7.0880180586677
-
+print(twice(n))
 
 
